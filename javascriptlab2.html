@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel='stylesheet' href='js-form-validation.css' type='text/css' />
+    
+    
+</head>
+
+<body>
+<script>  
+function validateform(){  
+var name=document.myform.name.value;  
+var password=document.myform.password.value;  
+  
+if (name.length<3 || name==""){  
+  alert("Name can't less than 3 characters");  
+  return false;  
+}else if(password.length<6){  
+  alert("Password must be at least 6 characters long.");  
+  return false;  
+  } 
+  else(phoneno.length<10){
+  	alert("phone no should be ten numbers in length");
+  	return false;
+
+  }
+
+}  
+</script>  
+  
+<form name="myform" method="post" action="abc.jsp" onsubmit="return validateform()" >  
+Name: <input type="text" name="name" pattern="[a-zA-Z'-'\s]*" required><br/>  
+Password: <input type="password" name="password" required><br/> 
+email:<input type="email" name="email" required><br>
+phoneno:<input type="tel"name="phone" required>
+<input type="submit" value="register">   
+</form>  
+
+</body>
+</html>
